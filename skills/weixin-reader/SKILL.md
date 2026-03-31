@@ -1,3 +1,9 @@
+---
+name: weixin-reader
+description:  |
+      读取微信公众号文章内容, 当用户提供微信公众号文章链接（域名是 mp.weixin.qq.com）时使用此 skill
+      必须提供微信链接, 或者 "读这篇微信文章", "看一下这个公众号文章" 等有明确意图也读取该 skill
+---
 # weixin_reader
 
 读取微信公众号文章内容。
@@ -15,13 +21,13 @@
 ## 使用方法
 
 ```bash
-python3 ~/.claude/skills/weixin_reader/weixin_reader.py "<微信文章URL>"
+python3 weixin_reader.py "<微信文章URL>"
 ```
 
 ## 示例
 
 ```bash
-python3 ~/.claude/skills/weixin_reader/weixin_reader.py "https://mp.weixin.qq.com/s?__biz=xxx&mid=xxx"
+python3 weixin_reader.py "https://mp.weixin.qq.com/s?__biz=xxx&mid=xxx"
 ```
 
 ## 输出格式
