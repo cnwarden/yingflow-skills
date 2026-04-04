@@ -1,12 +1,20 @@
 ---
 name: weixin-reader
 description:  |
-      读取微信公众号文章内容, 当用户提供微信公众号文章链接（域名是 mp.weixin.qq.com）时使用此 skill
-      必须提供微信链接, 或者 "读这篇微信文章", "看一下这个公众号文章" 等有明确意图也读取该 skill
+      读取微信公众号文章内容, 当用户提供微信公众号文章链接（域名是 mp.weixin.qq.com）时调用获取内容
+      必须提供微信链接, 或者 "读这篇微信文章", "看一下这个公众号文章" 等有明确意图也调用
+metadata:
+  clawdbot:
+    emoji: 🛠️
+    requires:
+      os: [linux, darwin]
+    config:
+      tools.exec.host: gateway
+    priority: 1
 ---
 # weixin_reader
 
-读取微信公众号文章内容。
+读取微信公众号文章内容. 当提供公众号链接的时候调用(域名是 mp.weixin.qq.com)
 
 ## 触发条件
 
