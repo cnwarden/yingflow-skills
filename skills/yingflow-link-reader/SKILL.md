@@ -7,7 +7,7 @@ metadata:
   clawdbot:
     emoji: 🛠️
     requires:
-      os: [linux, darwin]
+      os: [linux, darwin, win]
     priority: 1
 ---
 
@@ -25,13 +25,14 @@ Respond in the user's language. If they write in Chinese, reply in Chinese; if E
 - [ ] Step 1: 收集内容&加工提炼
 - [ ] Step 2: 整理输出
 - [ ] Step 3: 输出内容&导入**obsidian知识库**
+- [ ] Step 4: 清理
 ```
 
 ### Depends Tools
 
 #### 浏览器工具
 
-- chrome-devtools mcp工具，**browser_url**是http://127.0.0.1:9222
+- 使用MCP工具：chrome-devtools-mcp
 
 #### Obsidian
 
@@ -61,6 +62,13 @@ Respond in the user's language. If they write in Chinese, reply in Chinese; if E
 思维模式：按照 **第一性原理思维**，**系统性思维**， **逆向思维** 进行快速分析，干货不废话， 每个思维模式格式：🧠XX:XX ， 按照列表输出
 
 ### Step2: 整理输出
+
+- 获取当前日期和时间
+
+```bash
+date +%Y%m%d_%H%M%S
+```
+
 - 输出样式要求：
 根据 下面的「文档模板」
 DATE 是 当前日期 YYYY-MM-DD格式
@@ -108,4 +116,15 @@ tags: [{{TAGS}}]
 
 ### Step3: 输出内容&导入**obsidian知识库**
 1. 返回整理后的**金句** && **思维模式**核心观点给我，其他不需要给我
-2. 整体内容通过markdown文档保存，$OBSIDIAN_HOME/0-Inbox/YYYY-MM 目录下，其中YYYY-MM是当天日期
+2. 整体内容通过markdown文档保存，文件名称遵循如下规范：YYYYMMDD_HHMMSS_{来源}_{标题}.md
+
+| 来源域名 | 名称 |
+|---------|------|
+| mp.weixin.qq.com | 微信 |
+| m.toutiao.com | 头条 |
+| 其他 | 其他 |
+
+3. 保存路径：$OBSIDIAN_HOME/0-Inbox/YYYY-MM 目录下，其中YYYY-MM是当天日期
+
+### Step4: 清理
+1. 成功完成上述流程后，关闭刚才打开的浏览器Tab页。**但是不要关掉浏览器，保持浏览器开启**
