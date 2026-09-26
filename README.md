@@ -6,6 +6,10 @@
 npx skills add cnwarden/yingflow-skills
 ```
 
+## 技能
+
+- [yingflow-link-reader](skills/yingflow-link-reader/SKILL.md)：阅读并整理网页内容，保存到 Obsidian。
+- [yingflow-social-media-publish](skills/yingflow-social-media-publish/SKILL.md)：将小红书等社交媒体的发布记录写入 YingFlow 多维表格。使用前需设置 `YINGFLOW_MD_TOKEN` 和 `YINGFLOW_TABLE_TOKEN` 环境变量。
 
 ## 参与贡献
 
